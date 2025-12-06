@@ -15,6 +15,27 @@ Este projeto é uma plataforma web desenvolvida em **React** com foco em gestão
 2. Abra a pasta OTIS e rode o comando NPM install
 3. Após isso, NPM RUN DEV
 
+## Acessos
+ADMIN_00
+ana.geral
+123
+
+VENDAS_01
+joao.vendas
+123
+
+FAB_02
+maria.fab
+123
+
+INSTAL_03
+pedro.inst
+123
+
+CLIENTE_10
+alfa.client
+123
+
 
 ## Funcionalidades 
 - Cadastro de Fornecedores

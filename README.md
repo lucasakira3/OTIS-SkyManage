@@ -1,14 +1,39 @@
-# React + Vite
+# OTIS SkyManage
 
-## Repositório criado para o desenvolvimento do projeto Challenge OTIS para a banca final
+Este projeto é uma plataforma web desenvolvida em **React** com foco em gestão e organização de informações, oferecendo uma interface moderna, responsiva e fácil de utilizar.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+------------------------------------------
 
-Currently, two official plugins are available:
+## Estrutura do Projeto
+- /pages: Contém as páginas do projeto, como home, ordens de serviço, fornecedores, filiais, preventiva etc...
+- /css: Estilização das páginas do projeto
+- /data: arquivos javascript de mock
+- /components: header, sidebar e timeline.jsx
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Como Executar
+1. Faça o dowload ou clone desse repositório
+2. Abra a pasta OTIS e rode o comando NPM install
+3. Após isso, NPM RUN DEV
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidades 
+- Cadastro de Fornecedores
+- Cadastro e acompanhamento de ordens de serviço
+- Rastreamento de pedidos
+- Cadastro e controle de peças e ferramentas
+- Indicadores Operacionais
+- Níveis de Acesso
+
+## Tecnologias Utilizadas 
+- HTML5
+- CSS3 (Bootstrap e estilos próprios)
+- JavaScript
+- React
+
+## Créditos Desenvolvido por 
+- Fabrício Alves Magoga
+- Pedro Dalmas Batista e Souza
+- Lucas Akira Teruya
+- João Pedro Benedet
+- Alan Carlos Bernardes de Lima 
+

@@ -1,0 +1,35 @@
+/* Botão */
+.btn-estoque {
+  background-color: #041c44;
+  border: none;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.btn-estoque:hover {
+  background-color: #06306d;
+}
+
+/* Estilo tabela */
+.estoque-table {
+  border: 2px solid #041c44;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.estoque-table th {
+  background-color: #041c44;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
+
+.estoque-table td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.estoque-table tr:nth-child(even) {
+  background-color: #f4f6f8; /* linhas alternadas */
+}

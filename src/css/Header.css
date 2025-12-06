@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Largura total */
+  height: 60px;
+  background-color: #041c44; /* azul OTIS */
+  color: white;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  transition: left 0.3s ease;
+}
+
+.header.expanded {
+  left: 220px; /* Desloca após a Sidebar expandida */
+  width: calc(100% - 220px);
+}
+
+.header.collapsed {
+  left: 0; /* Alinha à esquerda quando a Sidebar está colapsada */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%; /* Garante que ocupe a largura total disponível */
+  /*Dessa forma, o header não conflita com a sidebar*/
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto; /* Não cresce nem encolhe */
+  margin-right: 20px;
+}
+
+.hamburger-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  margin-right: 15px;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto; /* Cresce para ocupar o espaço central */
+  justify-content: center; /* Centraliza a barra de pesquisa */
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  max-width: 600px; /* Limita a largura da barra */
+  width: 100%; /* Ocupa toda a largura disponível no centro */
+  margin: 0; /* Remove margens para centralização precisa */
+}
+
+.search-icon {
+  position: absolute;
+  margin-left: 15px;
+  color: #adb5bd;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 40px; /* Aumenta o padding */
+  border: none;
+  border-radius: 25px; /* Arredondamento */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto; /* Não cresce nem encolhe */
+  margin-left: 20px;
+}
+
+.dropdown {
+  position: relative;
+  margin-left: 15px;
+}
+
+.dropdown-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dropdown-icon:hover {
+  color: #1abc9c;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  padding: 10px 0;
+  z-index: 1001;
+  color: #333;
+}
+
+.profile-menu {
+  min-width: 150px;
+}
+
+.dropdown-item {
+  padding: 8px 15px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f3f5;
+}
+
+.time, .due {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    left: 0; /* Ocupa toda a largura */
+  }
+
+
+  .header-content {
+    max-width: 100%; /* Ocupa toda a largura */
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+  }
+
+  .header-center {
+    flex: 1 1 100%; /* Ocupa toda a largura em telas pequenas */
+    margin: 5px 0; /* Espaçamento vertical */
+  }
+
+  .header-search {
+    max-width: 200px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+
+  .dropdown-icon {
+    font-size: 1.1rem;
+  }
+}

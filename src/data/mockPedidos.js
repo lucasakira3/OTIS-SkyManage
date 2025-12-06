@@ -1,0 +1,32 @@
+export const PEDIDOS = [
+  {
+    id: "1023 - Corretiva",
+    cliente: "Construtora A",
+    obra: "Residencial Vista Azul - Bloco 1",
+    modelo: "Elevador MRL 630kg",
+    status: "Execução",
+    previsaoEntrega: "2025-10-15",
+    responsavelAtual: "Fábrica (planejamento de peças importadas)",
+    observacoes: "Itens importados com SLA 60–90 dias; alinhado com vendas.",
+  },
+  {
+    id: "1041 - Instalação",
+    cliente: "Construtora B",
+    obra: "Torre Central - Corporativo",
+    modelo: "Elevador 1000kg c/ espelho",
+    status: "Proposta",
+    previsaoEntrega: "2025-11-02",
+    responsavelAtual: "Supervisor de Campo SP",
+    observacoes: "Alinhar valores com o cliente e fornecedores",
+  },
+  {
+    id: "1077 - Preventiva",
+    cliente: "Incorp X",
+    obra: "Residencial da Serra - Bloco 2",
+    modelo: "Elevador 450kg",
+    status: "Aprovação",
+    previsaoEntrega: "2025-12-10",
+    responsavelAtual: "Comercial",
+    observacoes: "Dependente da assinatura de contrato (award).",
+  },
+];

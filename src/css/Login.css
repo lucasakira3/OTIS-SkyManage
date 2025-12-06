@@ -1,0 +1,95 @@
+/* src/css/Login.css */
+
+/* VARIÁVEIS DE COR (Para consistência) */
+:root {
+  --otis-blue: #041c44;
+  --otis-dark: #000000;
+  --otis-white: #ffffff;
+}
+
+/* 1. LAYOUT PRINCIPAL E FUNDO ESCURO */
+.login-page-background {
+  background-color: var(--otis-blue);
+  display: flex;
+  justify-content: center; /* Centraliza os itens */
+  align-items: center;
+  min-height: 100vh; /* Ocupa a tela inteira */
+  box-sizing: border-box;
+  gap: 100px; /* Adiciona um espaço entre o logo e o formulário */
+
+}
+
+/* 2. ESTILO DO LOGO (OTIS SKYMANAGE) */
+.login-logo-container {
+  color: var(--otis-white);
+  text-align: left;
+  /* Ajuste o tamanho da largura do logo em relação ao formulário */
+  max-width: 450px; 
+}
+.logo-otis {
+  font-size: 8rem; /* Tamanho grande do OTIS */
+  font-weight: 900;
+  margin-bottom: -20px;
+}
+.logo-skymanage {
+  font-size: 2.5rem; /* Tamanho menor do SKYMANAGE */
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+}
+
+/* 3. CONTAINER DO FORMULÁRIO */
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 4. CARD BRANCO ARREDONDADO */
+.login-card-design {
+  /* Largura e arredondamento do card como na imagem */
+  width: 350px; 
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+/* 5. ESTILO DO BOTÃO PRINCIPAL */
+.login-button-otis {
+  background-color: var(--otis-blue) !important;
+  border-color: var(--otis-blue) !important;
+  font-weight: bold;
+}
+.login-button-otis:hover {
+  background-color: #002d5d !important; /* Cor mais escura no hover */
+  border-color: #002d5d !important;
+}
+
+/* 6. ESTILO DOS PLACEHOLDERS (Para o texto 'Ex: joao.vendas') */
+.form-control::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+/* 7. ESTILO DO LINK RECUPERAR SENHA */
+.recuperar-senha-link {
+  color: var(--otis-blue);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.recuperar-senha-link:hover {
+  text-decoration: underline;
+}
+
+/* 8. MEDIA QUERY (Para celular, o logo some e o card centraliza) */
+@media (max-width: 768px) {
+  .login-page-background {
+    justify-content: center;
+    padding: 20px;
+  }
+  .login-logo-container {
+    display: none; /* Esconde o logo lateral no mobile */
+  }
+  .login-card-design {
+    width: 90%;
+  }
+}

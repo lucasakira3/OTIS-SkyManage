@@ -1,0 +1,50 @@
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-horizontal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.card-img-left {
+  width: 40%; /* imagem ocupa 40% do card */
+  object-fit: cover;
+}
+
+.card-body-horizontal {
+  width: 60%; /* texto ocupa 60% do card */
+  padding: 1rem;
+}
+
+.btn-otis {
+  background-color: #003399;
+  border-color: #003399;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-otis:hover {
+  background-color: #002080;
+  border-color: #002080;
+  color: white;
+}
+
+.card-title-otis {
+  color: #041c44;
+  font-weight: 600;
+}
+
+.card-text-otis {
+  color: #555;
+}
+
+.card-text-strong {
+  font-weight: 900;
+}

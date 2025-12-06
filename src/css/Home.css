@@ -1,0 +1,271 @@
+/* src/css/Home.css */
+
+:root{
+  --primary-color-custom: #041c44;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.calendar-day {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+  min-height: 100px;
+  background: #f8f9fa;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.calendar-day:hover {
+  background: #e3f2fd;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day strong {
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+.calendar-events {
+  margin-top: 5px;
+}
+
+.calendar-event {
+  background: #0d6efd;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-indicator.online {
+  background-color: #198754;
+}
+
+.status-indicator.offline {
+  background-color: #6c757d;
+}
+
+.mapa-container {
+  position: relative;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  min-height: 500px;
+}
+
+.zoom-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+}
+
+.mapa-america-latina {
+  display: block;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+.mapa-pais {
+  transition: all 0.3s ease;
+}
+
+.mapa-pais.destaque {
+  stroke-width: 1.5px;
+  fill: #6792cb !important;
+  stroke: #305eac;
+  stroke-width: 0.5%;
+  filter: brightness(1.1);
+}
+
+/* NOVOS ESTILOS PARA ALINHAMENTO DAS CARDS */
+.equal-height-cards {
+  display: flex;
+}
+
+.equal-height-cards > .col-md-7,
+.equal-height-cards > .col-md-5 {
+  display: flex;
+}
+
+.equal-height-cards .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.equal-height-cards .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.equal-height-cards .flex-grow-1 {
+  flex-grow: 1;
+}
+
+/* NOVOS ESTILOS PARA SVG DO PAÍS */
+.pais-info-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.pais-content {
+  flex: 1;
+}
+
+.pais-svg-container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.pais-svg-mini {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  background: white;
+  padding: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+  background-color: #041c44;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 12px;
+  border: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.btn-custom:hover {
+  background-color: #0a2e66;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .calendar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .calendar-day {
+    min-height: 80px;
+  }
+
+  .zoom-controls {
+    flex-direction: row;
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .mapa-america-latina {
+    transform: scale(1); 
+  }
+
+  /* Responsividade para o container do país */
+  .pais-info-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pais-svg-container {
+    margin-top: 15px;
+    order: -1;
+  }
+
+  /* Responsividade para cards alinhadas */
+  .equal-height-cards {
+    flex-direction: column;
+  }
+}
+
+.calendar-event{
+  text-align: left;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color-custom);
+  border-color: var(--primary-color-custom);
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: var(--primary-color-custom);
+  border-color: var(--primary-color-custom);
+}
+
+.btn-custom {
+  background-color: var(--primary-color-custom);
+  color: #fff;
+  border-color: var(--primary-color-custom);
+}
+
+.btn-custom:hover {
+  background-color: #031433; 
+  border-color: #031433;
+  color: #fff;
+}
+
+.text-primary {
+  color: var(--primary-color-custom) !important;
+}
+
+.pie-chart-primary-color {
+  fill: var(--primary-color-custom); 
+}
+
+.badge-primary-custom {
+  background-color: var(--primary-color-custom) !important;
+}
+
+.mapa-pais.selected-custom {
+  fill: var(--primary-color-custom) !important;
+}
+
+.mapa-pais.hovered-custom {
+    fill: #062b5a !important; 
+}
+
+
+.modal-grande .modal-content {
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  padding: 1rem;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  height: 550px;          /* altura mínima */
+}
